@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="move.js"></script>
+<style>
+*{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	font-size:12px;
+	text-decoration:none;
+}
+.clear{
+	clear:both;	
+}
+#arise{
+	width:100px;
+	height:400px;
+	position:absolute;
+	background:#ccc;
+	z-index:1001;
+	display:none;
+}
+#arise ul li{
+	float:left;
+}
+#hide{
+	height:100px;
+	width:100px;
+	background:#ccc;	
+	position:absolute;
+	top:400px;
+	left:0;
+	z-index:1001;
+}
+#main{
+	width:1366px;
+	background:#d884ce url(image/bg.png) no-repeat bottom left;
+	position:relative;
+	z-index:1000;
+}
+.show{
+	position:absolute;
+	top:130px;
+	left:470px;
+	filter:alpha(opacity:0);
+	opacity:0;
+}
+#introduction{
+	width:1366px;
+	background:#ec84bf;
+}
+#introduction #intr-title{
+	height:170px;
+	position:relative;
+	overflow:hidden;
+}
+#introduction #intr-title h1{
+	background:url(image/big-text.png) no-repeat 0 0;
+	position:absolute;
+	top:50px;
+	right:50px;	
+}
+#introduction #intr-title h1 a{
+	display:block;
+	height:120px;
+	width:450px;
+	text-indent:470px;    /*设置文本缩进超过宽度*/
+	white-space:nowrap;  /*强制不换行*/
+	overflow:hidden;	
+}
+#introduction #intr-title span{
+	background:url(image/back.png) no-repeat 0 0;
+	position:absolute;
+	top:50px;
+	left:120px;
+}
+#introduction #intr-title span a{
+	display:block;
+	height:110px;
+	width:295px;
+	text-indent:300px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+#ExpInSchool{
+	width:1366px;
+	background:#687ce3;
+}
+#ExpInSchool #Sch-title{
+	height:195px;
+	position:relative; /*设置其子容器绝对定位以父容器为参照物*/
+	overflow:hidden;
+}
+#ExpInSchool #Sch-title h1{
+	background:url(image/big-text.png) no-repeat;
+	background-position:0 -120px;
+	position:absolute;
+	left:470px;
+	top:50px;
+}
+#ExpInSchool #Sch-title h1 a{
+	display:block;
+	height:145px;
+	width:470px;
+	text-indent:475px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+#ExpInSchool #Sch-title span{
+	background:url(image/back.png) no-repeat 0 -100px;
+	position:absolute;
+	top:72px;
+	left:190px;	
+}
+#ExpInSchool #Sch-title span a{
+	display:block;
+	height:90px;
+	width:470px;
+	text-indent:475px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+#ExpPE{
+	width:1366px;
+	background:#0ef84a;
+}
+#ExpPE #PE-title{
+	height:160px;
+	position:relative;	
+}
+#ExpPE #PE-title h1{
+	background:url(image/big-text.png) no-repeat 0 -265px;
+	position:absolute;
+	top:50px;
+	left:100px;
+}
+#ExpPE #PE-title h1 a{
+	display:block;
+	height:105px;
+	width:470px;
+	text-indent:475px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+#ExpPE #PE-title span{
+	background:url(image/back.png) no-repeat 0 -200px;
+	position:absolute;
+	top:40px;
+	right:95px;	
+}
+#ExpPE #PE-title span a{
+	display:block;
+	height:100px;
+	width:290px;
+	text-indent:295px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+#Project{
+	width:1366px;
+	background:#0ef8e5;
+}
+#Project #Pro-title{
+	height:282px;
+	position:relative;	
+}
+#Project #Pro-title h1{
+	background:url(image/big-text.png) no-repeat 0 -367px;
+	position:absolute;
+	top:50px;
+	left:470px;
+}
+#Project #Pro-title h1 a{
+	display:block;
+	height:132px;
+	width:470px;
+	text-indent:475px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+#Project #Pro-title span{
+	background:url(image/back.png) no-repeat 0 -305px;
+	position:absolute;
+	top:175px;
+	left:545px;	
+}
+#Project #Pro-title span a{
+	display:block;
+	height:93px;
+	width:290px;
+	text-indent:295px;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+
+</style>
+<script>
+window.onload=function (){
+	var oMain=document.getElementById('main');
+	var aA=oMain.getElementsByTagName('a');
+	var oA1=document.getElementById('a1');
+	var oA2=document.getElementById('a2');
+	var oA3=document.getElementById('a3');
+	var oA4=document.getElementById('a4');
+	var aImg=oMain.getElementsByTagName('img');
+	
+	oMain.style.height=document.documentElement.clientHeight+'px';
+	//alert(document.documentElement.clientHeight);
+	startMove(oA1,{opacity:100},function(){
+		startMove(oA2,{opacity:100,left:740,top:0});	
+		startMove(oA3,{opacity:100,left:860,top:170});	
+		startMove(oA4,{opacity:100,left:740,top:360});
+	});
+	for(var i=0;i<aImg.length;i++){
+		aImg[i].index=i;
+		var rate=1.1;
+		aImg[i].onmouseover=function(){
+			var w=this.offsetWidth;
+			var h=this.offsetHeight;
+			
+			startMove(this,{height:Math.ceil(h*rate),width:Math.ceil(w*rate)});
+			aImg[this.index].onmouseout=function (){				
+				startMove(this,{height:h,width:w});				
+			};	
+		};	
+		
+	}	
+};
+</script>
+</head>
+
+<body>
+<div id="silder">
+    <ul id="arise">
+    	<li><a href="javascript:;" title="Contact"><img src="image/Contact.png" /></a></li>
+        <li><a href="javascript:;" title="WeChat"><img src="image/WeChat.png" /></a></li>
+        <li><a href="javascript:;" title="My Code"><img src="image/MyCode.png"</a></li>
+        <li><a href="javascript:;" ><img src="image/hide.png" /></a></li>
+    </ul>
+    <div id="hide" class="clear">
+    	<a href="javascript:;"><img src="image/sider.png" /></a>
+    </div>
+</div>
+<div id="main" >
+	<a id="a1" class="show" href="javascript:;"><img src="image/introduction.png" /></a>
+    <a id="a2" class="show" href="javascript:;"><img src="image/schoolexp.png" /></a>
+    <a id="a3" class="show" href="javascript:;"><img src="image/JSexp.png"/></a>
+    <a id="a4" class="show" href="javascript:;"><img src="image/exploit.png" /></a>
+</div>
+<div id="introduction">
+	<div id="intr-title">
+    	<h1><a href="javascript:;" title="基本资料">基本资料</a></h1>
+        <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+</div>
+<div id="ExpInSchool">
+	<div id="Sch-title">
+    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+        <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+</div>
+<div id="ExpPE">
+	<div id="PE-title">
+    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+        <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+</div>
+<div id="Project">
+	<div id="Pro-title">
+    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+        <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+</div>
+</body>
+</html>
