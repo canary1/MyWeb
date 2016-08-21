@@ -51,6 +51,7 @@
 #introduction{
 	width:1366px;
 	background:#ec84bf;
+	overflow:hidden;
 }
 #introduction #intr-title{
 	height:170px;
@@ -62,8 +63,6 @@
 	position:absolute;
 	top:50px;
 	right:50px;	
-}
-#introduction #intr-title h1 a{
 	display:block;
 	height:120px;
 	width:450px;
@@ -85,9 +84,23 @@
 	white-space:nowrap;
 	overflow:hidden;
 }
+#introduction #intr-content{
+	width:970px;
+	margin:40px auto;
+	border:white groove 10px;	/*设置边框为3dgroove效果*/
+}
+#introduction #intr-content p{
+	font-family:"华文新魏";
+	font-size:25px;
+	text-indent:2em;
+	line-height:30px;
+	color:#333;
+	padding:20px;
+}
 #ExpInSchool{
 	width:1366px;
 	background:#687ce3;
+	overflow:hidden;
 }
 #ExpInSchool #Sch-title{
 	height:195px;
@@ -100,8 +113,6 @@
 	position:absolute;
 	left:470px;
 	top:50px;
-}
-#ExpInSchool #Sch-title h1 a{
 	display:block;
 	height:145px;
 	width:470px;
@@ -123,9 +134,15 @@
 	white-space:nowrap;
 	overflow:hidden;	
 }
+#ExpInSchool #Sch-content{
+	height:200px;
+	background:url(image/biankuang.png) repeat-x 0 0;
+	margin:20px auto;	
+}
 #ExpPE{
 	width:1366px;
 	background:#0ef84a;
+	overflow:hidden;
 }
 #ExpPE #PE-title{
 	height:160px;
@@ -136,8 +153,6 @@
 	position:absolute;
 	top:50px;
 	left:100px;
-}
-#ExpPE #PE-title h1 a{
 	display:block;
 	height:105px;
 	width:470px;
@@ -159,9 +174,16 @@
 	white-space:nowrap;
 	overflow:hidden;	
 }
+#ExpPE #PE-content{
+	height:200px;
+	width:970px;
+	background:#ccc;
+	margin:20px auto;	
+}
 #Project{
 	width:1366px;
 	background:#0ef8e5;
+	overflow:hidden;
 }
 #Project #Pro-title{
 	height:282px;
@@ -172,14 +194,12 @@
 	position:absolute;
 	top:50px;
 	left:470px;
-}
-#Project #Pro-title h1 a{
 	display:block;
 	height:132px;
 	width:470px;
 	text-indent:475px;
 	white-space:nowrap;
-	overflow:hidden;	
+	overflow:hidden;
 }
 #Project #Pro-title span{
 	background:url(image/back.png) no-repeat 0 -305px;
@@ -195,7 +215,12 @@
 	white-space:nowrap;
 	overflow:hidden;	
 }
-
+#Project #Pro-content{
+	height:200px;
+	width:970px;
+	background:#ccc;
+	margin:20px auto;	
+}
 </style>
 <script>
 window.onload=function (){
@@ -252,26 +277,44 @@ window.onload=function (){
 </div>
 <div id="introduction">
 	<div id="intr-title">
-    	<h1><a href="javascript:;" title="基本资料">基本资料</a></h1>
+    	<h1>基本资料</h1>
         <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+    <div id="intr-content">
+    	<p>我叫王雯凤，是个开朗热情的女生。在生活中，我喜欢安静，喜欢一个人听音乐。当然这并不表示我是个孤立的人，我喜欢交朋友，喜欢帮助朋友。我也是个爱学习的人，特别是对自己感兴趣的知识，我会在自己闲暇的时间一头扎进去。</p>
+        <p>而对于前端，我是发自内心的感兴趣，它不像后台开发那么枯燥和难以理解，丰富的视觉效果让我发自内心的想要深入了解并做出自己的项目。我的个人主页是我完全独立完成的第一个前端应用，在增强自己前端知识应用的同时，让更多人更好的了解我。</p>
     </div>
 </div>
 <div id="ExpInSchool">
 	<div id="Sch-title">
-    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+    	<h1>在校经历</h1>
         <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+    <div id="Sch-content">
+    	<ul>
+        	<li>2013.10-2014.6 在校勤工担任干事，服务于全校4000余名困难生</li>
+            <li>2013.10-2013.12 参加党校第80期入党积极分子培训班并顺利结业</li>
+            <li>2014.06-2015.10 在校勤工担任部长一职，组织主办3次大型活动，数次小型活动</li>
+            <li>2014.05-2015.03 参与发展性资助项目一般项目调研，并成功结题</li>
+            <li>2015.05-2016.03 负责发展性资助项目重点项目调研，并成功结题</li>
+            <li>2015.11至今 参与浙江省第十届“挑战杯”大学生创业大赛获得省赛银奖，校赛二等奖</li>
+        </ul>
     </div>
 </div>
 <div id="ExpPE">
 	<div id="PE-title">
-    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+    	<h1>在校经历</h1>
         <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+    <div id="PE-content">
     </div>
 </div>
 <div id="Project">
 	<div id="Pro-title">
-    	<h1><a href="javascript:;" title="基本资料">在校经历</a></h1>
+    	<h1>在校经历</h1>
         <span><a href="javascript:;" title="返回">返回</a></span>
+    </div>
+    <div id="Pro-content">
     </div>
 </div>
 </body>
