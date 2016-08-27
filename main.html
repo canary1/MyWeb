@@ -2,228 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>王雯凤的主页 Canary</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
 <script src="move.js"></script>
-<style>
-*{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	font-size:12px;
-	text-decoration:none;
-}
-.clear{
-	clear:both;	
-}
-#arise{
-	width:100px;
-	height:400px;
-	position:absolute;
-	background:#ccc;
-	z-index:1001;
-	display:none;
-}
-#arise ul li{
-	float:left;
-}
-#hide{
-	height:100px;
-	width:100px;
-	background:#ccc;	
-	position:absolute;
-	top:400px;
-	left:0;
-	z-index:1001;
-}
-#main{
-	width:1366px;
-	background:#d884ce url(image/bg.png) no-repeat bottom left;
-	position:relative;
-	z-index:1000;
-}
-.show{
-	position:absolute;
-	top:130px;
-	left:470px;
-	filter:alpha(opacity:0);
-	opacity:0;
-}
-#introduction{
-	width:1366px;
-	background:#ec84bf;
-	overflow:hidden;
-}
-#introduction #intr-title{
-	height:170px;
-	position:relative;
-	overflow:hidden;
-}
-#introduction #intr-title h1{
-	background:url(image/big-text.png) no-repeat 0 0;
-	position:absolute;
-	top:50px;
-	right:50px;	
-	display:block;
-	height:120px;
-	width:450px;
-	text-indent:470px;    /*设置文本缩进超过宽度*/
-	white-space:nowrap;  /*强制不换行*/
-	overflow:hidden;	
-}
-#introduction #intr-title span{
-	background:url(image/back.png) no-repeat 0 0;
-	position:absolute;
-	top:50px;
-	left:120px;
-}
-#introduction #intr-title span a{
-	display:block;
-	height:110px;
-	width:295px;
-	text-indent:300px;
-	white-space:nowrap;
-	overflow:hidden;
-}
-#introduction #intr-content{
-	width:970px;
-	margin:40px auto;
-	border:white groove 10px;	/*设置边框为3dgroove效果*/
-}
-#introduction #intr-content p{
-	font-family:"华文新魏";
-	font-size:25px;
-	text-indent:2em;
-	line-height:30px;
-	color:#333;
-	padding:20px;
-}
-#ExpInSchool{
-	width:1366px;
-	background:#687ce3;
-	overflow:hidden;
-}
-#ExpInSchool #Sch-title{
-	height:195px;
-	position:relative; /*设置其子容器绝对定位以父容器为参照物*/
-	overflow:hidden;
-}
-#ExpInSchool #Sch-title h1{
-	background:url(image/big-text.png) no-repeat;
-	background-position:0 -120px;
-	position:absolute;
-	left:470px;
-	top:50px;
-	display:block;
-	height:145px;
-	width:470px;
-	text-indent:475px;
-	white-space:nowrap;
-	overflow:hidden;	
-}
-#ExpInSchool #Sch-title span{
-	background:url(image/back.png) no-repeat 0 -100px;
-	position:absolute;
-	top:72px;
-	left:190px;	
-}
-#ExpInSchool #Sch-title span a{
-	display:block;
-	height:90px;
-	width:470px;
-	text-indent:475px;
-	white-space:nowrap;
-	overflow:hidden;	
-}
-#ExpInSchool #Sch-content{
-	height:200px;
-	background:url(image/biankuang.png) repeat-x 0 0;
-	margin:20px auto;	
-}
-#ExpPE{
-	width:1366px;
-	background:#0ef84a;
-	overflow:hidden;
-}
-#ExpPE #PE-title{
-	height:160px;
-	position:relative;	
-}
-#ExpPE #PE-title h1{
-	background:url(image/big-text.png) no-repeat 0 -265px;
-	position:absolute;
-	top:50px;
-	left:100px;
-	display:block;
-	height:105px;
-	width:470px;
-	text-indent:475px;
-	white-space:nowrap;
-	overflow:hidden;	
-}
-#ExpPE #PE-title span{
-	background:url(image/back.png) no-repeat 0 -200px;
-	position:absolute;
-	top:40px;
-	right:95px;	
-}
-#ExpPE #PE-title span a{
-	display:block;
-	height:100px;
-	width:290px;
-	text-indent:295px;
-	white-space:nowrap;
-	overflow:hidden;	
-}
-#ExpPE #PE-content{
-	height:200px;
-	width:970px;
-	background:#ccc;
-	margin:20px auto;	
-}
-#Project{
-	width:1366px;
-	background:#0ef8e5;
-	overflow:hidden;
-}
-#Project #Pro-title{
-	height:282px;
-	position:relative;	
-}
-#Project #Pro-title h1{
-	background:url(image/big-text.png) no-repeat 0 -367px;
-	position:absolute;
-	top:50px;
-	left:470px;
-	display:block;
-	height:132px;
-	width:470px;
-	text-indent:475px;
-	white-space:nowrap;
-	overflow:hidden;
-}
-#Project #Pro-title span{
-	background:url(image/back.png) no-repeat 0 -305px;
-	position:absolute;
-	top:175px;
-	left:545px;	
-}
-#Project #Pro-title span a{
-	display:block;
-	height:93px;
-	width:290px;
-	text-indent:295px;
-	white-space:nowrap;
-	overflow:hidden;	
-}
-#Project #Pro-content{
-	height:200px;
-	width:970px;
-	background:#ccc;
-	margin:20px auto;	
-}
-</style>
 <script>
+window.onscroll=window.onresize=function (){
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	var pageHeight=document.documentElement.clientHeight;
+    
+	var oSilder=document.getElementById('silder');
+	var oArise=document.getElementById('arise');
+	var oHide=document.getElementById('hide');
+	
+	oSilder.style.top=(pageHeight-oSilder.offsetHeight)+scrollTop+'px';	
+};
 window.onload=function (){
+	
 	var oMain=document.getElementById('main');
 	var aA=oMain.getElementsByTagName('a');
 	var oA1=document.getElementById('a1');
@@ -231,6 +25,10 @@ window.onload=function (){
 	var oA3=document.getElementById('a3');
 	var oA4=document.getElementById('a4');
 	var aImg=oMain.getElementsByTagName('img');
+	var oSilder=document.getElementById('silder');
+	var oArise=document.getElementById('arise');
+	var oHide=document.getElementById('hide');
+
 	
 	oMain.style.height=document.documentElement.clientHeight+'px';
 	//alert(document.documentElement.clientHeight);
@@ -253,42 +51,54 @@ window.onload=function (){
 		};	
 		
 	}	
+	oHide.onmouseover=function (){
+		startMove(oHide,{opacity:100});
+	};
+	oHide.onmouseout=function (){
+		startMove(oHide,{opacity:50});
+	};
+	oHide.onclick=function (){
+		oArise.style.display='block';
+		startMove(oArise,{left:0});
+	};
+
 };
 </script>
 </head>
 
 <body>
-<div id="silder">
-    <ul id="arise">
-    	<li><a href="javascript:;" title="Contact"><img src="image/Contact.png" /></a></li>
-        <li><a href="javascript:;" title="WeChat"><img src="image/WeChat.png" /></a></li>
-        <li><a href="javascript:;" title="My Code"><img src="image/MyCode.png"</a></li>
+<div id="silder" class="slider">
+    <ul id="arise" >
+    	<li><img title="Contact" src="image/Contact.png" /></li>
+        <li><img title="WeChat" src="image/WeChat.png" /></li>
+        <li><img title="MyCode" src="image/MyCode.png" /></li>
         <li><a href="javascript:;" ><img src="image/hide.png" /></a></li>
     </ul>
-    <div id="hide" class="clear">
+    <div id="hide">
     	<a href="javascript:;"><img src="image/sider.png" /></a>
     </div>
 </div>
 <div id="main" >
-	<a id="a1" class="show" href="javascript:;"><img src="image/introduction.png" /></a>
-    <a id="a2" class="show" href="javascript:;"><img src="image/schoolexp.png" /></a>
-    <a id="a3" class="show" href="javascript:;"><img src="image/JSexp.png"/></a>
-    <a id="a4" class="show" href="javascript:;"><img src="image/exploit.png" /></a>
+	
+	<a id="a1" class="show" href="#introduction"><img src="image/introduction.png" /></a>
+    <a id="a2" class="show" href="#ExpInSchool"><img src="image/schoolexp.png" /></a>
+    <a id="a3" class="show" href="#ExpPE"><img src="image/JSexp.png"/></a>
+    <a id="a4" class="show" href="#Project"><img src="image/exploit.png" /></a>
 </div>
-<div id="introduction">
+<div id="introduction" class="four">
 	<div id="intr-title">
-    	<h1>基本资料</h1>
-        <span><a href="javascript:;" title="返回">返回</a></span>
+    	<h1 class="h1"></h1>
+        <span class="span"><a class="a" href="#main" title="返回">返回</a></span>
     </div>
     <div id="intr-content">
     	<p>我叫王雯凤，是个开朗热情的女生。在生活中，我喜欢安静，喜欢一个人听音乐。当然这并不表示我是个孤立的人，我喜欢交朋友，喜欢帮助朋友。我也是个爱学习的人，特别是对自己感兴趣的知识，我会在自己闲暇的时间一头扎进去。</p>
         <p>而对于前端，我是发自内心的感兴趣，它不像后台开发那么枯燥和难以理解，丰富的视觉效果让我发自内心的想要深入了解并做出自己的项目。我的个人主页是我完全独立完成的第一个前端应用，在增强自己前端知识应用的同时，让更多人更好的了解我。</p>
     </div>
 </div>
-<div id="ExpInSchool">
+<div id="ExpInSchool" class="four">
 	<div id="Sch-title">
-    	<h1>在校经历</h1>
-        <span><a href="javascript:;" title="返回">返回</a></span>
+    	<h1 class="h1"></h1>
+        <span class="span"><a class="a" href="#main" title="返回"></a></span>
     </div>
     <div id="Sch-content">
     	<ul>
@@ -296,23 +106,33 @@ window.onload=function (){
             <li>2013.10-2013.12 参加党校第80期入党积极分子培训班并顺利结业</li>
             <li>2014.06-2015.10 在校勤工担任部长一职，组织主办3次大型活动，数次小型活动</li>
             <li>2014.05-2015.03 参与发展性资助项目一般项目调研，并成功结题</li>
+            <li>2014.11 获得2013/2014学年社会工作奖学金</li>
             <li>2015.05-2016.03 负责发展性资助项目重点项目调研，并成功结题</li>
+            <li>2015.10 参加经济管理学院第二届微党课讲课比赛并获得三等奖</li>
             <li>2015.11至今 参与浙江省第十届“挑战杯”大学生创业大赛获得省赛银奖，校赛二等奖</li>
+            <li>2015.11 获得校勤工“优秀部长”称号</li>
         </ul>
     </div>
 </div>
-<div id="ExpPE">
+<div id="ExpPE" class="four">
 	<div id="PE-title">
-    	<h1>在校经历</h1>
-        <span><a href="javascript:;" title="返回">返回</a></span>
+    	<h1 class="h1"></h1>
+        <span class="span"><a class="a" href="#main" title="返回">返回</a></span>
     </div>
     <div id="PE-content">
+    	<ul>
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 </div>
-<div id="Project">
+<div id="Project" class="four">
 	<div id="Pro-title">
-    	<h1>在校经历</h1>
-        <span><a href="javascript:;" title="返回">返回</a></span>
+    	<h1 class="h1"></h1>
+        <span class="span"><a class="a" href="#main" title="返回">返回</a></span>
     </div>
     <div id="Pro-content">
     </div>

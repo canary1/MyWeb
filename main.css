@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	font-size:12px;
+	text-decoration:none;
+}
+.clear{
+	clear:both;	
+}
+.slider{
+	width:100px;
+	height:500px;
+	position:absolute;
+	z-index:1001;	 /*设置样式层次*/
+}
+.show{
+	position:absolute;
+	top:130px;
+	left:470px;
+	filter:alpha(opacity:0);
+	opacity:0;
+}
+.four{
+	width:1366px;
+	overflow:hidden;
+}
+.h1{
+	background:url(image/big-text.png) no-repeat;
+	position:absolute;
+	top:50px;
+	display:block;
+	text-indent:475px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.span{
+	background:url(image/back.png) no-repeat;
+	position:absolute;
+}
+.a{
+	display:block;
+	text-indent:305px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+#arise{
+	background:#ccc;
+	height:400px;
+	position:absolute;
+	left:-100px;
+}
+#hide{
+	background:#ccc;
+	width:100px;
+	position:absolute;
+	top:400px;
+	left:0;
+	filter:alpha(opacity:50);
+	opacity:0.5;
+}
+#main{
+	width:1366px;
+	background:#d884ce url(image/bg.png) no-repeat bottom left;
+	position:relative;
+	z-index:1000;
+}
+#introduction{
+	background:#ec84bf;
+}
+#introduction #intr-title{
+	height:170px;
+	position:relative;
+	overflow:hidden;
+}
+#introduction #intr-title h1{
+	background-possition:0 0;
+	right:50px;	
+	height:120px;
+	width:450px;
+}
+#introduction #intr-title span{
+	background-position:0 0;
+	top:50px;
+	left:120px;
+}
+#introduction #intr-title span a{
+	height:110px;
+	width:295px;
+}
+#introduction #intr-content{
+	width:970px;
+	margin:40px auto;
+	border:white groove 10px;	/*设置边框为3dgroove效果*/
+}
+#introduction #intr-content p{
+	font-family:"华文新魏";
+	font-size:25px;
+	text-indent:2em;
+	line-height:30px;
+	color:#333;
+	padding:20px;
+}
+#ExpInSchool{
+	background:#687ce3;
+}
+#ExpInSchool #Sch-title{
+	height:195px;
+	position:relative; /*设置其子容器绝对定位以父容器为参照物*/
+	overflow:hidden;
+}
+#ExpInSchool #Sch-title h1{
+	background-position:0 -120px;
+	left:470px;
+	height:145px;
+	width:470px;
+}
+#ExpInSchool #Sch-title span{
+	background-position:0 -100px;
+	top:72px;
+	left:190px;	
+}
+#ExpInSchool #Sch-title span a{
+	height:90px;
+	width:470px;
+}
+#ExpInSchool #Sch-content{
+	background:url(image/biankuang.png) repeat-x 0 0;
+	margin:auto;	
+}
+#ExpInSchool #Sch-content ul{
+	width:970px;
+	margin:auto;
+}
+#ExpInSchool #Sch-content ul li{
+	font-family:"宋体";
+	font-size:20px;
+	text-indent:80px;
+	line-height:80px;
+	background:url(image/progess.png) repeat-y 0 0;
+	}
+#ExpPE{
+	background:#0ef84a;
+}
+#ExpPE #PE-title{
+	height:160px;
+	position:relative;	
+}
+#ExpPE #PE-title h1{
+	background-position:0 -265px;
+	left:100px;
+	height:105px;
+	width:470px;
+}
+#ExpPE #PE-title span{
+	background-position:0 -200px;
+	top:40px;
+	right:95px;	
+}
+#ExpPE #PE-title span a{
+	height:100px;
+	width:290px;
+}
+#ExpPE #PE-content{
+	background:url(image/biankuang.png) repeat-x 0 0;
+	margin:auto;
+}
+#Project{
+	background:#0ef8e5;
+}
+#Project #Pro-title{
+	height:282px;
+	position:relative;	
+}
+#Project #Pro-title h1{
+	background-position:0 -367px;
+	left:470px;
+	height:132px;
+	width:470px;
+}
+#Project #Pro-title span{
+	background-position:0 -305px;
+	top:175px;
+	left:545px;	
+}
+#Project #Pro-title span a{
+	height:93px;
+	width:290px;
+}
+#Project #Pro-content{
+	height:200px;
+	width:970px;
+	background:#ccc;
+	margin:20px auto;	
+}
+
