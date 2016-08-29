@@ -190,9 +190,11 @@
 	width:290px;
 }
 #Project #Pro-content{
-	height:200px;
 	width:970px;
-	background:#ccc;
-	margin:20px auto;	
+	margin:20px auto;
+}
+#Project #Pro-content li{
+	float:left;
+	margin:50px;
 }
 

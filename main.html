@@ -13,8 +13,13 @@ window.onscroll=window.onresize=function (){
 	var oSilder=document.getElementById('silder');
 	var oArise=document.getElementById('arise');
 	var oHide=document.getElementById('hide');
+	var oSch=document.getElementById('Sch-content');
+	var aLi=oSch.getElementsByTagName('li');
 	
-	oSilder.style.top=(pageHeight-oSilder.offsetHeight)+scrollTop+'px';	
+	oSilder.style.top=pageHeight-oSilder.offsetHeight+scrollTop-20+'px';
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].style.background='url(image/progess1.png) repeat-y 0 0';	
+	}
 };
 window.onload=function (){
 	
@@ -28,6 +33,7 @@ window.onload=function (){
 	var oSilder=document.getElementById('silder');
 	var oArise=document.getElementById('arise');
 	var oHide=document.getElementById('hide');
+	var aLi=oArise.getElementsByTagName('li');
 
 	
 	oMain.style.height=document.documentElement.clientHeight+'px';
@@ -58,8 +64,14 @@ window.onload=function (){
 		startMove(oHide,{opacity:50});
 	};
 	oHide.onclick=function (){
-		oArise.style.display='block';
-		startMove(oArise,{left:0});
+		startMove(oArise,{left:0},function (){
+			startMove(oHide,{left:-100});	
+		});
+	};
+	aLi[3].onclick=function (){
+		startMove(oArise,{left:-100},function (){
+			startMove(oHide,{left:0});
+		});
 	};
 
 };
@@ -134,8 +146,11 @@ window.onload=function (){
     	<h1 class="h1"></h1>
         <span class="span"><a class="a" href="#main" title="返回">返回</a></span>
     </div>
-    <div id="Pro-content">
-    </div>
+    <ul id="Pro-content">
+    	<li><a href="javascript:;"><img src="image/DIV.png" /></a></li>
+        <li><a href="javascript:;"><img src="image/JS.png" /></a></li>
+        <li><a href="javascript:;"><img src="image/blog.png"/></a></li>
+    </ul>
 </div>
 </body>
 </html>
